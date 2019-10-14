@@ -1,0 +1,112 @@
+
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
+        <link rel="stylesheet" type="text/css" href="test_design.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+        <script src="scripts.js"></script>
+        <title>Page VE</title>
+  </head>
+
+    <body>
+        <div id="header">
+            <p class="title">ID Client: 103456</p>
+            <p class="phone">Telephone: 77 567 43 56</p>
+            <p class="client_name"><img src="farmer.png" alt="icon producteur" width="30" height="30">  Sokhna Aissatou Faye</p>
+        </div>
+        <div id="body">
+            <div class="tab">
+                <button class="tablinks" onclick="openKPI(event, 'Paquet')" id="defaultOpen">Paquet</button>
+                <button class="tablinks" onclick="openKPI(event, 'Collecte')">Collecte</button>
+                <button class="tablinks" onclick="openKPI(event, 'Jours de travail')">Cartes vendues</button>
+            </div>
+            
+            <div id="Paquet" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Paquet</td>
+                        <td class="T2">Sorgho + Maraichage (Gombo)</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Taille</td>
+                        <td class="T2">1/4 HA</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Prix</td>
+                        <td class="T2">17 000 CFA</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="Collecte" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Objectif</td>
+                        <td class="T2">16 650 500</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Payé</td>
+                        <td class="T2">8 405 000</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Restant</td>
+                        <td class="T2">8 000 000</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="Jours de travail" class="tabcontent">
+                <table class="carte">
+                    <thead>
+                        <tr>
+                            <th  class="a1">Carte</th>
+                            <th class="a2">Montant</th>
+                            <th class="a2">Date d'envoi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th  class="a1">12356754356789</th>
+                            <th class="a2">5000</th>
+                            <th class="a2">12/10/2019</th>
+                        </tr>
+                        <tr>
+                                <th  class="a1">12356754356789</th>
+                                <th class="a2">2000</th>
+                                <th class="a2">12/10/2019</th>
+                            </tr>
+                            <tr>
+                                    <th  class="a1">12356754356789</th>
+                                    <th class="a2">1000</th>
+                                    <th class="a2">12/10/2019</th>
+                                </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>    
+
+        <script>
+        function openKPI(evt, KPIname) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(KPIname).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>               
+    </body>
+</html> 
+                      

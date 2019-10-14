@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
+        <link rel="stylesheet" type="text/css" href="test_design.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+        <script src="scripts.js"></script>
+        <title>Page VE</title>
+  </head>
+
+    <body>
+        <div id="header">
+            <p class="title">Entrepreneur</p>
+            <p class="ve_name"><img src="farmer.png" alt="icon producteur" width="30"
+                height="30">  Moussa Ndiaye</p>
+        </div>
+        <div id="body">
+            <div class="tab">
+                <button class="tablinks" onclick="openKPI(event, 'Inscription')" id="defaultOpen">Inscription</button>
+                <button class="tablinks" onclick="openKPI(event, 'Collecte')">Collecte</button>
+                <button class="tablinks" onclick="openKPI(event, 'Jours de travail')">Jours de travail</button>
+            </div>
+            
+            <div id="Inscription" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Objectif</td>
+                        <td class="T2">1240</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Inscrits</td>
+                        <td class="T2">806</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Restant</td>
+                        <td class="T2">400</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="Collecte" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Objectif</td>
+                        <td class="T2">16 650 500</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Collecté</td>
+                        <td class="T2">8 405 000</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Restant</td>
+                        <td class="T2">8 000 000</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="Jours de travail" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Objectif</td>
+                        <td class="T2">4 jours</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Cette semaine</td>
+                        <td class="T2">2 jours</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Semaine passé</td>
+                        <td class="T2">3 jours</td>
+                    </tr>
+                </table>
+                <p class="jours_actif" style="font-size:11px; margin-left: 1rem;">Jours actifs: Jours où le VE a vendu au moins une carte</p>
+            </div>
+            <div id="villages">
+                    <table class="village">
+                        <tr>
+                            <td class="T1"> <nav>Ngayokheme</nav></td>
+                            <td class="T2"><button> Producteurs <i class="arrow right"></i></button></td>
+                        </tr>
+                        <tr>
+                                <td class="T1">Sarabali</td>
+                                <td class="T2"><button> Producteurs <i class="arrow right"></i></button></td>
+                            </tr>
+                    </table>
+            </div>
+        </div>    
+
+        <script>
+        function openKPI(evt, KPIname) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(KPIname).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>               
+    </body>
+</html> 
+                      
