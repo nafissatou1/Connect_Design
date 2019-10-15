@@ -1,0 +1,150 @@
+
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Jekyll v3.8.5">
+        <link rel="stylesheet" type="text/css" href="test_design.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap" rel="stylesheet">
+        <title>Page Zone</title>
+  </head>
+
+    <body>
+        <div id="header">
+            <p class="title">Zone</p>
+            <p class="ve_name"><img src="farmer.png" alt="icon producteur" width="30"
+                height="30">Toubatoul</p>
+        </div>
+        <div id="body">
+            <div class="tab">
+                <button class="tablinks_zone" onclick="openKPI(event, 'Inscription')" id="defaultOpen">Inscription</button>
+                <button class="tablinks_zone" onclick="openKPI(event, 'Collecte')">Collecte</button>
+                <button class="tablinks_zone" onclick="openKPI(event, 'VE_objectif')">Objectif VE</button>
+                <button class="tablinks_zone" onclick="openKPI(event, 'Clients_actifs')">Actifs</button>
+            </div>
+            
+            <div id="Inscription" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Objectif</td>
+                        <td class="T2">1240</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Inscrits</td>
+                        <td class="T2">806</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Restant</td>
+                        <td class="T2">400</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div id="Collecte" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Objectif</td>
+                        <td class="T2">16 650 500</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Payé</td>
+                        <td class="T2">8 405 000</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Restant</td>
+                        <td class="T2">8 000 000</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="VE_objectif" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Objectif</td>
+                        <td class="T2">42</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Résultat</td>
+                        <td class="T2">0</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Restant</td>
+                        <td class="T2">42</td>
+                    </tr>
+                </table>
+            </div>
+            <div id="Clients_actifs" class="tabcontent">
+                <table class="kpi">
+                    <tr>
+                        <td class="T1">Objectif</td>
+                        <td class="T2">840</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Inscrits</td>
+                        <td class="T2">140</td>
+                    </tr>
+                    <tr>
+                        <td class="T1">Restant</td>
+                        <td class="T2">700</td>
+                    </tr>
+                </table>
+            </div>
+        </div>  
+        <div class="SL_list">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="b1">SLs</th>
+                        <th class="b2">Inscrits</th>
+                        <th class="b2">Objectif</th>
+                        <th class="b2">Restant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="SL.html">Abdoulaye Berthe</a></td>
+                        <td> 168</a></td>
+                        <td> 1000 </a></td>
+                        <td> 832 </a></td>
+                    <tr>
+                        <td>Adama Diarra</a></td>
+                        <td> 132</a></td>
+                        <td> 1000 </a></td>
+                        <td> 868 </a></td>
+                    <tr>
+                        <td>Issouf Ouattara</a></td>
+                        <td> 236</a></td>
+                        <td> 1000 </a></td>
+                        <td> 764 </a></td>
+                    <tr>
+                        <td>Samba Maiga</a></td>
+                        <td> 287</a></td>
+                        <td> 1000 </a></td>
+                        <td> 713 </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+        function openKPI(evt, KPIname) {
+            var i, tabcontent, tablinks_zone;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            tablinks_zone = document.getElementsByClassName("tablinks_zone");
+            for (i = 0; i < tablinks_zone.length; i++) {
+            tablinks_zone[i].className = tablinks_zone[i].className.replace(" active", "");
+            }
+            document.getElementById(KPIname).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>               
+    </body>
+</html> 
+                      
