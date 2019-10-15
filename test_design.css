@@ -76,7 +76,7 @@ div.tab button.tablinks {
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.tab button.tablinks.active, .tab button.tablinks1.active, .tab button.tablinks_zone.active {
     background-color: #86C232;
     color: #F2F2F2;
 }
@@ -125,6 +125,8 @@ table.village button{
     text-align: center;
     text-decoration: none;
     border-radius: 0.3rem;
+    font-size: 0.9rem;
+    width: 7rem;
 }
 
 /* CLIENT PAGE */
@@ -161,7 +163,7 @@ table.client_table{
     border-collapse: collapse;
     border-radius: 0.7em 0.7em 0 0;
     overflow: hidden;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     position: relative;
     width: 98%;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
