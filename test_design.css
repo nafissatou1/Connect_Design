@@ -233,7 +233,7 @@ div.VE_list table, div.SL_list table{
 div.VE_list table th, div.SL_list table th{
     padding: 0.5rem;
     border-bottom: 1px solid #ddd;
-    background-color: rgba(134, 194, 50, 0.842);
+    background-color: #86C232;
     color: #F2F2F2;
 }
 button.tablinks1{
