@@ -3,6 +3,7 @@
 body{
     background-color: rgba(242, 242, 242, 0.781);
     font-family: 'Open Sans', sans-serif;
+    width: 100%;
 }
 #header{
     background-color: #61892F;
@@ -54,20 +55,24 @@ div.tabcontent table td:first-child, table.village td:first-child{
     border-radius: 1rem 1rem 0 0;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
     position: relative;
-    table-layout: fixed
+    width: 100%;
+    display:flex; 
+    flex-direction:row;
 }
 
 /* Style the buttons inside the tab */
 div.tab button.tablinks {
     background-color: inherit;
-    float: left;
+    flex-grow:1;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 0.8rem 0.8rem;
+    padding: 0.8rem 0.3rem 0.8rem 0.3rem;
     transition: 0.3s;
     font-size: 1.05rem;
     color: #474B4F;
+    display: inline-block;
+    border-right: 0.5px solid rgb(175, 174, 174);
 }
 
 /* Change background color of buttons on hover */
@@ -76,7 +81,7 @@ div.tab button.tablinks {
 }
 
 /* Create an active/current tablink class */
-.tab button.tablinks.active, .tab button.tablinks1.active, .tab button.tablinks_zone.active {
+.tab button.tablinks.active {
     background-color: #86C232;
     color: #F2F2F2;
 }
@@ -106,7 +111,7 @@ div#villages{
     border-radius: 0.2rem;
     color: #474B4F;
     font-size: 0.9rem;
-    margin: 1rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
 }
 div#villages td{
     border-bottom: 1px solid #ddd;
@@ -218,7 +223,7 @@ div.VE_list, div.SL_list{
     padding: 0;
     color: #474B4F;
     font-size: 0.9rem;
-    margin: 1.5rem 0 1rem 0;
+    margin: 2rem 0 1rem 0;
 }
 div.VE_list table td, div.SL_list table td{
     border-bottom: 1px solid #ddd;
@@ -236,30 +241,6 @@ div.VE_list table th, div.SL_list table th{
     background-color: #86C232;
     color: #F2F2F2;
 }
-button.tablinks1{
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0.8rem 0.8rem;
-    transition: 0.3s;
-    font-size: 1.05rem;
-    width:50%;
-}
+
 
 /* ZONE PAGE */
-div.tab button.tablinks_zone {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0.8rem 0.4rem 0.8rem 0.4rem;
-    transition: 0.3s;
-    font-size: 1.05rem;
-    color: #474B4F;
-}
-div.tab .tablinks_zone.active {
-    background-color: #86C232;
-    color: #F2F2F2;
-}
